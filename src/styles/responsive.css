@@ -1,0 +1,102 @@
+/* ─── GLOBAL RESPONSIVE HARDENING ─── */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* ─── MOBILE PHONES (< 480px: 360px - 480px) ─── */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .announcement-bar {
+    font-size: 0.685rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .header-inner {
+    height: 70px;
+  }
+
+  .header-logo img {
+    height: 32px;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .pdp-title {
+    font-size: 1.75rem;
+  }
+
+  .pdp-cta-group {
+    flex-direction: column;
+  }
+
+  .pdp-qty-stepper {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pdp-add-btn {
+    width: 100%;
+  }
+
+  .empty-state-form {
+    flex-direction: column;
+  }
+
+  .empty-state-form .btn {
+    width: 100%;
+  }
+
+  .cart-drawer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Sticky Mobile Bar adjustment for safe area */
+  .pdp-sticky-bar {
+    padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* ─── TOUCH TARGET ENFORCEMENT ─── */
+button, 
+a, 
+input, 
+select {
+  touch-action: manipulation;
+}
+
+.icon-btn,
+.mobile-nav-toggle,
+.mobile-nav-close,
+.cart-close-btn,
+.qty-btn,
+.modal-close-btn {
+  min-width: 44px;
+  min-height: 44px;
+}
